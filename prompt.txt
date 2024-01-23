@@ -1,0 +1,123 @@
+SQL-el dolgozunk.
+Van egy suli ellenőrző adatbázisunk.
+Jegyeket kell hozzáadnunk a 'jegyek' táblához.
+A jegyek tábla struktúrája a következő: 
+	#	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
+	1	id_jegyek  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
+ 	2	tanulo_id  Index	int(10)		UNSIGNED	No	None		
+ 	3	oktato_id  Index	int(10)		UNSIGNED	No	None		
+ 	4	tantargy_id  Index	int(10)		UNSIGNED	No	None		
+ 	5	jegy	int(10)		UNSIGNED	No	None		
+ 	6	datum	date			No	None		
+ 	7	ertekeles_modja_id  Index	int(10)		UNSIGNED	No	None		
+ 	8	ertekeles_temaja	varchar(50)	utf8_hungarian_ci		No	None		
+
+A jegyek táblához tartozik egy 'ertekeles_modja' tábla is, amelynek struktúrája a következő:
+    #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
+    1	id_ertekeles_modja  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
+    2	mod_megnevezese	varchar(50)	utf8_hungarian_ci		No	None		
+
+A jegyek táblához tartozik egy 'tanulo' tábla is, amelynek struktúrája a következő:
+    #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
+    1	id_tanulo  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
+    2	v_nev	varchar(255)	utf8_hungarian_ci		No	None		
+    3	k_nev	varchar(255)	utf8_hungarian_ci		No	None		
+    4	om_azonosito	varchar(20)	utf8_hungarian_ci		No	None		
+    5	szul_hely	varchar(15)	utf8_hungarian_ci		No	None		
+    6	szul_ido	date			No	None		
+
+A jegyek táblához tartozik egy 'oktato' tábla is, amelynek struktúrája a következő:
+    #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
+    1	id_oktato  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
+    2	v_nev	varchar(255)	utf8_hungarian_ci		No	None		
+    3	k_nev	varchar(255)	utf8_hungarian_ci		No	None		
+
+A jegyek táblához tartozik egy 'tantargy' tábla is, amelynek struktúrája a következő:
+    #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra	Action
+    1	id_tantagy  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
+    2	tantargy_neve	varchar(255)	utf8_hungarian_ci		No	None		
+    3	oktato_id  Index	int(10)		UNSIGNED	No	None		
+
+Az 'ertekeles_modja' tartalma:
+    1
+    Na
+
+    2
+    Írásbeli témazáró dolgozat
+
+    3
+    Írásbeli röpdolgozat
+
+    4
+    Szóbeli felelet
+
+    5
+    Beszámoló
+
+    6
+    Gyakorlati feladat
+
+    7
+    Kisérettségi
+
+    8
+    Házi feladat
+
+    9
+    Házi dolgozat
+
+    10
+    Projektmunka
+
+    11
+    Órai munka
+
+    12
+    Másik intézményből hozott értékelés
+
+    13
+    Órai feladat
+
+    14
+    Szorgalmi feladat
+
+    15
+    E-learning feladat
+
+    16
+    Kisdolgozat
+
+    17
+    Nyelvi feladat
+
+    18
+    Teszt feladat
+
+    19
+    Kompetenciamérés
+
+    20
+    Versenyeredmény
+
+    21
+    Feladatlap
+
+    22
+    Országos kompetenciamérés
+
+    23
+    Írásbeli dolgozat
+
+    24
+    Írásbeli felelet
+
+    25
+    Beadandó feladat
+
+
+
+Ezután adatokat fogsz kapni.
+Az adatok váltózó módon jelenhetnek meg, de ugyanazokat az adatokat tartalmazza.
+A te dolgod az, hogy az adatbázisunk alapján írj egy sql insert parancssort amely beimportálja számunkra a diák jegyeit.
+A diáki jegyeit kell beraknunk a jegyek táblába.
+Ha érted csak annyival válaszolj, hogy "ok.", majd mikor megkaptad az adatokat csak az sql parancssorral válaszolj.
