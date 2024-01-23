@@ -1,6 +1,7 @@
 SQL-el dolgozunk.
 Van egy suli ellenőrző adatbázisunk.
 Jegyeket kell hozzáadnunk a 'jegyek' táblához.
+
 A jegyek tábla struktúrája a következő: 
 	#	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
 	1	id_jegyek  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
@@ -12,12 +13,12 @@ A jegyek tábla struktúrája a következő:
  	7	ertekeles_modja_id  Index	int(10)		UNSIGNED	No	None		
  	8	ertekeles_temaja	varchar(50)	utf8_hungarian_ci		No	None		
 
-A jegyek táblához tartozik egy 'ertekeles_modja' tábla is, amelynek struktúrája a következő:
+Az 'ertelekes_modja' tábla struktúrája a következő:
     #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
     1	id_ertekeles_modja  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
     2	mod_megnevezese	varchar(50)	utf8_hungarian_ci		No	None		
 
-A jegyek táblához tartozik egy 'tanulo' tábla is, amelynek struktúrája a következő:
+Az 'tanulo' tábla struktúrája a következő:
     #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
     1	id_tanulo  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
     2	v_nev	varchar(255)	utf8_hungarian_ci		No	None		
@@ -26,11 +27,70 @@ A jegyek táblához tartozik egy 'tanulo' tábla is, amelynek struktúrája a k�
     5	szul_hely	varchar(15)	utf8_hungarian_ci		No	None		
     6	szul_ido	date			No	None		
 
-A jegyek táblához tartozik egy 'oktato' tábla is, amelynek struktúrája a következő:
+Az 'oktato' tábla struktúrája a következő:
     #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
     1	id_oktato  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
     2	v_nev	varchar(255)	utf8_hungarian_ci		No	None		
     3	k_nev	varchar(255)	utf8_hungarian_ci		No	None		
+
+A 'tantargy' tálba struktúrája a következő:
+    #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra
+    1	id_tantargy  Primary	int(10)		UNSIGNED	No	None		AUTO_INCREMENT
+    2	tantargy_neve	varchar(255)	utf8_hungarian_ci		No	None		
+    3	oktato_id  Index	int(10)		UNSIGNED	No	None
+
+A 'tantargy' tábla tartalma:
+
+1 magyar_nyelv_es_irodalom 2
+
+2 angol_nyelv 6
+
+3 matematika 1
+
+4 tortenelem 3
+
+5 testneveles 4
+
+6 fizika 5
+
+7 ikt_prokektmunka_II. 12
+
+8 adatbazis-kezeles_I. 7
+
+9 halozatok_I. 8
+
+10 szakmai_angol 10
+
+11 asztali_alkalmazasok 11
+
+12 webprogramozas 9
+
+
+Az 'oktato' tábla tartalma:
+
+1 Nagy Brigitta
+
+2 Birta Ágnes
+
+3 Szalma Anna
+
+4 Deményi Norbert
+
+5 Péterffy Gáspár
+
+6 Jobbágy Nóra
+
+7 Takács István
+
+8 Csontos Dénes
+
+9 Szilágyi Bertalan
+
+10 Durda Szilvia
+
+11 Paár Norbert
+
+12 Horváth István 
 
 A jegyek táblához tartozik egy 'tantargy' tábla is, amelynek struktúrája a következő:
     #	Name	Type	Collation	Attributes	Null	Default	Comments	Extra	Action
@@ -39,85 +99,74 @@ A jegyek táblához tartozik egy 'tantargy' tábla is, amelynek struktúrája a 
     3	oktato_id  Index	int(10)		UNSIGNED	No	None		
 
 Az 'ertekeles_modja' tartalma:
-    1
-    Na
+    1 Na
 
-    2
-    Írásbeli témazáró dolgozat
+    2 Írásbeli témazáró dolgozat
 
-    3
-    Írásbeli röpdolgozat
+    3 Írásbeli röpdolgozat
 
-    4
-    Szóbeli felelet
+    4 Szóbeli felelet
 
-    5
-    Beszámoló
+    5 Beszámoló
 
-    6
-    Gyakorlati feladat
+    6 Gyakorlati feladat
 
-    7
-    Kisérettségi
+    7 Kisérettségi
 
-    8
-    Házi feladat
+    8 Házi feladat
 
-    9
-    Házi dolgozat
+    9 Házi dolgozat
 
-    10
-    Projektmunka
+    10 Projektmunka
 
-    11
-    Órai munka
+    11 Órai munka
 
-    12
-    Másik intézményből hozott értékelés
+    12 Másik intézményből hozott értékelés
 
-    13
-    Órai feladat
+    13 Órai feladat
 
-    14
-    Szorgalmi feladat
+    14 Szorgalmi feladat
 
-    15
-    E-learning feladat
+    15 E-learning feladat
 
-    16
-    Kisdolgozat
+    16 Kisdolgozat
 
-    17
-    Nyelvi feladat
+    17 Nyelvi feladat
 
-    18
-    Teszt feladat
+    18 Teszt feladat
 
-    19
-    Kompetenciamérés
+    19 Kompetenciamérés
 
-    20
-    Versenyeredmény
+    20 Versenyeredmény
 
-    21
-    Feladatlap
+    21 Feladatlap
 
-    22
-    Országos kompetenciamérés
+    22 Országos kompetenciamérés
 
-    23
-    Írásbeli dolgozat
+    23 Írásbeli dolgozat
 
-    24
-    Írásbeli felelet
+    24 Írásbeli felelet
 
-    25
-    Beadandó feladat
+    25 Beadandó feladat
 
+Az id_jegyek az NULL mivel AUTO_INCREMENT-et használunk.
+A 'tanulo_id' általában a szöveg tetején található név:id formátumban.
+Az 'oktato_id'-hoz vagy megkapjuk a tanár id-ját vagy a nevét.
+Ha csak a tanár nevét kaptuk meg akkor megnézzük a 'oktato' táblában, hogy melyik id-jú tanár neve egyezik meg a nekünk megadott névvel.
+A 'tantargy_id'-hoz vagy megkapjuk a tantárgy id-ját vagy a nevét.
+Ha a tantárgy nevét kaptuk meg akkor megnézzük a 'tantargy' táblában, hogy melyik id-jú tantárgy neve egyezik meg a nekünk megadott névvel.
+A 'jegy' mezőbe a jegyet kell beírni. A jegyek 1-5-ig terjednek. Általában zárójelbe vagy Értékelés(jegy) formátumban találhatóak.
+A 'datum' mezőbe a dátumot kell beírni.
+Az 'ertekeles_modja_id' mezőbe az értékelés módjának az id-ját kell beírni.
+Az 'ertekeles_temaja' mezőbe az értékelés témáját kell beírni.
 
+A feladatod az, hogy a jegyeket beírd az adatbázisba.
 
-Ezután adatokat fogsz kapni.
+Ezután táblázatszerű adatokat fogsz kapni.
 Az adatok váltózó módon jelenhetnek meg, de ugyanazokat az adatokat tartalmazza.
 A te dolgod az, hogy az adatbázisunk alapján írj egy sql insert parancssort amely beimportálja számunkra a diák jegyeit.
 A diáki jegyeit kell beraknunk a jegyek táblába.
 Ha érted csak annyival válaszolj, hogy "ok.", majd mikor megkaptad az adatokat csak az sql parancssorral válaszolj.
+
+
+Ha mindent értesz csak annyival válaszolj, hogy "ok.".
