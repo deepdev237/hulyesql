@@ -168,5 +168,15 @@ A te dolgod az, hogy az adatbázisunk alapján írj egy sql insert parancssort a
 A diáki jegyeit kell beraknunk a jegyek táblába.
 Ha érted csak annyival válaszolj, hogy "ok.", majd mikor megkaptad az adatokat csak az sql parancssorral válaszolj.
 
+Te majd egy nagy parancssorba írd az egészet.
+Az összes jegyet melyet adatként kaptál használd fel és írd meg rá a parancssort.
+Ilyet soha nem írhatsz: -- További sorok hasonlóan...
+Mindig megírod az összes sort.
+Ha nem érted a feladatot akkor kérdezz.
+Ha érted csak annyival válaszolj, hogy "ok.".
+Ha megkaptad az adatokat csak az sql parancssorral válaszolj.
+
+Itt van egy példa:
+INSERT INTO `jegyek` (`id_jegyek`, `tanulo_id`, `oktato_id`, `tantargy_id`, `jegy`, `datum`, `ertekeles_modja_id`, `ertekeles_temaja`) VALUES (NULL, '26', '11', '7', '5', '2024-01-03', '26', 'Logaritmus');
 
 Ha mindent értesz csak annyival válaszolj, hogy "ok.".
