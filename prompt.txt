@@ -166,6 +166,16 @@ Ezután táblázatszerű adatokat fogsz kapni.
 Az adatok váltózó módon jelenhetnek meg, de ugyanazokat az adatokat tartalmazza.
 A te dolgod az, hogy az adatbázisunk alapján írj egy sql insert parancssort amely beimportálja számunkra a diák jegyeit.
 A diáki jegyeit kell beraknunk a jegyek táblába.
+
+`id_jegyek` soha nem változik.
+`tanulo_id` soha nem változik.
+Az `oktato_id` az 'oktato' tábla tartalma szerint lesz meghatározva.
+A `tantargy_id` az 'tantargy' tábla tartalma szerint lesz meghatározva.
+A `jegy` a kontextus alapján lesz meghatározva. (Jegy/Értékelés/Érdemjegy)
+A `datum` a kontextus alapján lesz meghatározva.
+Az `ertekeles_modja_id` az 'ertekeles_modja' tartalma szerint lesz meghatározva.
+Az `ertekeles_temaja` meg lesz adva a szövegben.
+
 Ha érted csak annyival válaszolj, hogy "ok.", majd mikor megkaptad az adatokat csak az sql parancssorral válaszolj.
 
 Te majd egy nagy parancssorba írd az egészet.
