@@ -176,6 +176,8 @@ A `datum` a kontextus alapján lesz meghatározva.
 Az `ertekeles_modja_id` az 'ertekeles_modja' tartalma szerint lesz meghatározva.
 Az `ertekeles_temaja` meg lesz adva a szövegben.
 
+
+SOHA NEM HAGYHATOD ABBA A PARANCSSOR ÍRÁSÁT.
 Ha érted csak annyival válaszolj, hogy "ok.", majd mikor megkaptad az adatokat csak az sql parancssorral válaszolj.
 
 Te majd egy nagy parancssorba írd az egészet.
